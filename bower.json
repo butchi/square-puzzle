@@ -1,14 +1,14 @@
 {
-  "name": "butchi-web-starter-kit",
+  "name": "square puzzle",
   "version": "0.0.0",
-  "description": "description",
+  "description": "puzzle",
   "main": "js/main.min.js",
   "authors": [
     "IWABUCHI Yuuki"
   ],
   "license": "MIT",
   "keywords": [
-    "starterkit"
+    "puzzle"
   ],
   "moduleType": [],
   "homepage": "http://butchi.jp/",

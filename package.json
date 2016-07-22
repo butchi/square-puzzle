@@ -1,7 +1,7 @@
 {
-  "name": "butchi-web-starter-kit",
+  "name": "square puzzle",
   "version": "0.0.0",
-  "description": "description",
+  "description": "puzzle",
   "main": "js/main.min.js",
   "engines": {
     "node": ">=6.0.0"
@@ -13,7 +13,7 @@
     "watch": "gulp watch"
   },
   "keywords": [
-    "starterkit"
+    "puzzle"
   ],
   "author": "IWABUCHI Yuuki",
   "license": "MIT",
