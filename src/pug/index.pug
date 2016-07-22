@@ -1,17 +1,33 @@
+mixin cell
+  .cell(data-js-class="cell")
+    .tap-area(data-dir="top")
+    .tap-area(data-dir="right")
+    .tap-area(data-dir="bottom")
+    .tap-area(data-dir="left")
+
+mixin row
+  .row(data-js-class="row")
+    + cell
+    + cell
+    + cell
+
 doctype html
 html(lang='ja')
   head
     meta(charset='UTF-8')
-    title page
+    title
+      | Square Puzzle
     link(rel='stylesheet', href='css/style.css')
   body.page-index
     .wrapper
       header
         h1(data-heading-level='1')
-          | Page
+          | Square Puzzle
       main
-        p
-          | Thanks, world!
+        .square(data-js-class="square")
+          + row
+          + row
+          + row
 
     script(src='js/lib/jquery.min.js')
     script(src='js/lib/lodash.min.js')

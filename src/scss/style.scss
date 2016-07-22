@@ -13,3 +13,78 @@ body {
 main {
   display: block;
 }
+
+$cell-size: 100px;
+$tap-area-size: 25px;
+
+.square {
+  position: relative;
+
+  margin: 50px;
+
+  .cell {
+    display: block;
+
+    position: absolute;
+
+    width: $cell-size;
+    height: $cell-size;
+
+    border: 2px solid;
+    border-color: black;
+
+    .tap-area {
+      display: block;
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: $tap-area-size;
+      height: $tap-area-size;
+
+      transform: translate((- $tap-area-size / 2), (- $tap-area-size / 2));
+
+      border-radius: 100%;
+
+      cursor: pointer;
+
+      &[data-dir="top"] {
+        margin-left: 0px;
+        margin-top: - $cell-size / 2;
+      }
+
+      &[data-dir="right"] {
+        margin-left: $cell-size / 2;
+        margin-top: 0px;
+      }
+
+      &[data-dir="bottom"] {
+        margin-left: 0px;
+        margin-top: $cell-size / 2;
+      }
+
+      &[data-dir="left"] {
+        margin-left: - $cell-size / 2;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  @for $x from 0 through 2 {
+    .row {
+      .cell:nth-child(#{$x + 1}) {
+        left: $x * $cell-size;
+      }
+    }
+  }
+
+  @for $y from 0 through 2 {
+    .row:nth-child(#{$y + 1}) {
+      .cell {
+        top: $y * $cell-size;
+      }
+    }
+  }
+}
